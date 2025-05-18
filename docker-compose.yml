@@ -1,0 +1,9 @@
+services:
+  app: # Имя сервиса
+    build: .
+    working_dir: /app
+    volumes:
+      - ./app:/app # Монтирование директории app
+    ports:
+      - "3000:3000"
+    command: make test  # Запускаем make test внутри /app

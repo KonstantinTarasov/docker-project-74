@@ -1,0 +1,6 @@
+services:
+  app:
+    working_dir: /app  # Указываем рабочую директорию (где лежит Makefile)
+    ports:
+      - "8080:8080"
+    command: make dev  # Запускаем make dev внутри /app
